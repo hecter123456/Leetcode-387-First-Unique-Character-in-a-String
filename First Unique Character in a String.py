@@ -20,7 +20,7 @@ class Solution():
                 dic[char] = -1
             else:
                 dic[char] = i
-        dic = sorted(dic.items(), key=operator.itemgetter(1))
+        dic = sorted(dic.items(), key=lambda x: x[1])
         for key in dic:
             if key[1] != -1:
                 return key[1]
